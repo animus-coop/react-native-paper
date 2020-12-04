@@ -164,6 +164,9 @@ const ButtonExample = () => {
           >
             Custom component
           </Button>
+          <Button onPress={() => {}} style={styles.button} numberOfLines={2}>
+            Custom component with multi line custom component with multi line
+          </Button>
         </View>
       </List.Section>
     </ScrollView>

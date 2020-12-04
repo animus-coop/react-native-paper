@@ -80,6 +80,10 @@ type Props = React.ComponentProps<typeof Surface> & {
    */
   labelStyle?: StyleProp<TextStyle>;
   /**
+   * Maximum number of lines for the label.
+   */
+  numberOfLines?: number;
+  /**
    * @optional
    */
   theme: ReactNativePaper.Theme;
@@ -138,6 +142,7 @@ const Button = ({
   theme,
   contentStyle,
   labelStyle,
+  numberOfLines,
   testID,
   ...rest
 }: Props) => {
@@ -291,7 +296,7 @@ const Button = ({
             />
           ) : null}
           <Text
-            numberOfLines={1}
+            numberOfLines={numberOfLines || 1}
             style={[
               styles.label,
               compact && styles.compactLabel,
